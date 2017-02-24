@@ -87,6 +87,16 @@ public class MyViewGroup extends ViewGroup {
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
+         /*1）参数changed表示view有新的尺寸或位置；
+            2）参数l表示相对于父view的Left位置；
+            3）参数t表示相对于父view的Top位置；
+            4）参数r表示相对于父view的Right位置；
+            5）参数b表示相对于父view的Bottom位置。.*/
+       /* MyViewGroup那里的第102行不对，应该改为curHeight=0
+        因为onlayout中的int top这个参数是相对于父布局的top，
+        初始值并不是0，child.layout(l, curHeight, l + width, curHeight + height);
+        这里top那里应该给的是相对viewgroup的top，但传的值是相对于viewgroup父布局的top
+        如果这个自定义的viewgroup不是在父布局的第一个位置的话，就不是效果图中的那样了。*/
         int count = getChildCount();
         //记录当前的高度位置（子view距离顶部的高度）
         int curHeight = t;
@@ -99,5 +109,6 @@ public class MyViewGroup extends ViewGroup {
             curHeight += height;
         }
     }
+
 }
 
