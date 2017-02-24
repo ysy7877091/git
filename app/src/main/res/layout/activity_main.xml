@@ -6,12 +6,20 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="myaddasdasd.administrator.example.com.my90.MainActivity">
+    tools:context="myaddasdasd.administrator.example.com.my90.MainActivity"
+    android:orientation="vertical">
 
     <myaddasdasd.administrator.example.com.my90.MyView
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:text="Hello World!"
         hc:default_size="10dp"
+        />
+    <ToggleButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textOn="kai"
+        android:textOff="guan"
+        android:id="@+id/tb"
         />
 </LinearLayout>
