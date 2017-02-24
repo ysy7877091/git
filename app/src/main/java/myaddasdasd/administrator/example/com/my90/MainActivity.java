@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ToggleButton tb = (ToggleButton)findViewById(R.id.tb);
+       /* ToggleButton tb = (ToggleButton)findViewById(R.id.tb);
         tb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -23,6 +23,6 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"guan",Toast.LENGTH_SHORT).show();
                 }
             }
-        });
+        });*/
     }
 }
